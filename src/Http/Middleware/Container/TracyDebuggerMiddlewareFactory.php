@@ -12,7 +12,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Webware\Traccio\Middleware;
+namespace Webware\Traccio\Http\Middleware\Container;
 
 use Mezzio\Router\RouteCollectorInterface;
 use PhpDb\Adapter\Profiler\ProfilerInterface;
@@ -27,7 +27,8 @@ final readonly class TracyDebuggerMiddlewareFactory
         /** @var bool $hasProfiler */
         $hasProfiler = $container->has(ProfilerInterface::class);
         // Gotta have both the route collector and the panel to add it to the bar
-        $hasRouteCollector = $container->has(RouteCollectorInterface::class) && $container->has(Debug\RoutesPanel::class);
+        $hasRouteCollector =
+            $container->has(RouteCollectorInterface::class) && $container->has(Debug\RoutesPanel::class);
 
         /** @var Debug\RoutesPanel|null $routesPanel */
         $routesPanel = $hasRouteCollector ? $container->get(Debug\RoutesPanel::class) : null;
@@ -46,7 +47,7 @@ final readonly class TracyDebuggerMiddlewareFactory
             $hasProfiler,
             $configPanel,
             $sqlProfilerPanel,
-            $routesPanel
+            $routesPanel,
         );
     }
 }

@@ -14,7 +14,6 @@ declare(strict_types=1);
 
 namespace Webware\Traccio;
 
-use PhpDb\Adapter\AdapterInterface;
 use Tracy\Debugger;
 
 /**
@@ -33,13 +32,25 @@ use Tracy\Debugger;
 final readonly class ConfigProvider
 {
     /**
-     * @phpstan-return ConfigShape
+     * @phpstan-return DependencyShape
      */
-    public function __invoke(): array
+    public function getDependencies(): array
     {
         return [
-            'dependencies'  => $this->getDependencies(),
-            Debugger::class => $this->getTracyConfig(),
+            'factories' => [
+                Debug\ConfigPanel::class                       => Debug\ConfigPanelFactory::class,
+                Debug\RequestPanel::class                      => Debug\RequestPanelFactory::class,
+                Debug\SqlProfilerPanel::class                  => Debug\SqlProfilerPanelFactory::class,
+                Debug\RoutesPanel::class                       => Debug\RoutesPanelFactory::class,
+                Http\Middleware\TracyDebuggerMiddleware::class => Http\Middleware\Container\TracyDebuggerMiddlewareFactory::class,
+                Http\Middleware\RequestPanelMiddleware::class  => Http\Middleware\Container\RequestPanelMiddlewareFactory::class,
+            ],
+            // Add this to the application's config to enable DB profiling
+            // 'delegators' => [
+            //     AdapterInterface::class => [
+            //         PhpDb\ProfilingDelegator::class,
+            //     ],
+            // ],
         ];
     }
 
@@ -59,25 +70,13 @@ final readonly class ConfigProvider
     }
 
     /**
-     * @phpstan-return DependencyShape
+     * @phpstan-return ConfigShape
      */
-    public function getDependencies(): array
+    public function __invoke(): array
     {
         return [
-            'factories' => [
-                Debug\ConfigPanel::class                  => Debug\ConfigPanelFactory::class,
-                Debug\RequestPanel::class                 => Debug\RequestPanelFactory::class,
-                Debug\SqlProfilerPanel::class             => Debug\SqlProfilerPanelFactory::class,
-                Debug\RoutesPanel::class                  => Debug\RoutesPanelFactory::class,
-                Middleware\TracyDebuggerMiddleware::class => Middleware\TracyDebuggerMiddlewareFactory::class,
-                Middleware\RequestPanelMiddleware::class  => Middleware\RequestPanelMiddlewareFactory::class,
-            ],
-            // Add this to the application's config to enable DB profiling
-            // 'delegators' => [
-            //     AdapterInterface::class => [
-            //         PhpDb\ProfilingDelegator::class,
-            //     ],
-            // ],
+            'dependencies'  => $this->getDependencies(),
+            Debugger::class => $this->getTracyConfig(),
         ];
     }
 }

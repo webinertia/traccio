@@ -12,7 +12,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Webware\Traccio\Middleware;
+namespace Webware\Traccio\Http\Middleware\Container;
 
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
