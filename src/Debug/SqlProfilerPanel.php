@@ -31,28 +31,28 @@ final readonly class SqlProfilerPanel implements IBarPanel
     }
 
     #[Override]
-    public function getTab(): string
-    {
-        return Helpers::capture(function () {
-            $profiler = $this->data->getProfiler();
-            $profiles = $profiler instanceof Profiler ? $profiler->getProfiles() : [];
-            $summary  = (new ProfilerDataFormatter())->format($profiles)['summary'];
-            $count    = $summary['total_queries'];
-            $total    = $summary['total_elapsed'];
-
-            require __DIR__ . "/panels/{$this->id}.tab.phtml";
-        });
-    }
-
-    #[Override]
     public function getPanel(): string
     {
         return Helpers::capture(function () {
             $profiler = $this->data->getProfiler();
             $profiles = $profiler instanceof Profiler ? $profiler->getProfiles() : [];
-            $data     = (new ProfilerDataFormatter())->format($profiles);
+            $data     = new ProfilerDataFormatter()->format($profiles);
 
             require __DIR__ . "/panels/{$this->id}.panel.phtml";
+        });
+    }
+
+    #[Override]
+    public function getTab(): string
+    {
+        return Helpers::capture(function () {
+            $profiler = $this->data->getProfiler();
+            $profiles = $profiler instanceof Profiler ? $profiler->getProfiles() : [];
+            $summary  = new ProfilerDataFormatter()->format($profiles)['summary'];
+            $count    = $summary['total_queries'];
+            $total    = $summary['total_elapsed'];
+
+            require __DIR__ . "/panels/{$this->id}.tab.phtml";
         });
     }
 }

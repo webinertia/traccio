@@ -24,6 +24,14 @@ use Tracy\Debugger;
  */
 final class Configuration
 {
+    public static function debug(ContainerInterface $container): bool
+    {
+        /** @var array{debug?: bool} $config */
+        $config = $container->get('config');
+
+        return $config['debug'] ?? false;
+    }
+
     /**
      * @phpstan-return TracyConfig
      */
@@ -33,13 +41,5 @@ final class Configuration
         $config = $container->get('config');
 
         return $config[Debugger::class];
-    }
-
-    public static function debug(ContainerInterface $container): bool
-    {
-        /** @var array{debug?: bool} $config */
-        $config = $container->get('config');
-
-        return $config['debug'] ?? false;
     }
 }
