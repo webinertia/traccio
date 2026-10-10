@@ -11,7 +11,11 @@ Tracy Debugger integration and profiler for [Mezzio](https://docs.mezzio.dev/) a
 
 Traccio wires [Tracy](https://tracy.nette.org/) into a Mezzio middleware pipeline and provides purpose-built debug bar panels for configuration, routes, HTTP requests, and SQL query profiling.
 
----
+## Documentation
+
+- [v1 documentation](docs/v1/index.md)
+  - [Getting Started](docs/v1/getting-started.md)
+  - [Configuration](docs/v1/configuration.md)
 
 ## Requirements
 
@@ -19,27 +23,21 @@ Traccio wires [Tracy](https://tracy.nette.org/) into a Mezzio middleware pipelin
 | --- | --- |
 | PHP | `~8.2 \|\| ~8.3 \|\| ~8.4 \|\| ~8.5` |
 | tracy/tracy | `^2.11` |
-| mezzio/mezzio | `^3.26` *(dev / host app)* |
+| mezzio/mezzio | `^3.26` *(host app)* |
 
 Database profiling additionally requires a [PhpDb](https://github.com/php-db) adapter and the `php-db/phpdb` package.
 
----
+## Quick start
 
-## Installation
+**1. Install**
 
 ```bash
 composer require webware/traccio
 ```
 
-If you are using the [laminas-component-installer](https://docs.laminas.dev/laminas-component-installer/) plugin it will prompt you to inject the `ConfigProvider` automatically. Otherwise add it manually (see [Configuration](#configuration)).
+**2. Register the ConfigProvider**
 
----
-
-## Configuration
-
-### 1. Register the ConfigProvider
-
-Add `Webware\Traccio\ConfigProvider` to your application's config aggregator:
+The [laminas-component-installer](https://docs.laminas.dev/laminas-component-installer/) plugin offers to do this for you.
 
 ```php
 // config/config.php
@@ -52,107 +50,41 @@ $aggregator = new ConfigAggregator([
 ]);
 ```
 
-### 2. Tracy settings
-
-Create `config/autoload/tracy.global.php` (or add to an existing autoload file):
+**3. Enable debug**
 
 ```php
+// config/autoload/traccio.global.php
 use Tracy\Debugger;
 
 return [
-    'debug' => true,
-
+    'debug'         => true,
     Debugger::class => [
-        'dumpTheme'  => 'dark',   // 'light' or 'dark'
-        'keysToHide' => [
-            'password',
-            'pass',
-            'secret',
-        ],
-        // Any public static property of Tracy\Debugger can be set here.
-        // 'maxDepth'     => 10,
-        // 'maxLength'    => 250,
-        // 'showLocation' => true,
+        'enable' => Debugger::Development,
     ],
 ];
 ```
 
-Set `'debug' => true` or enable Mezzio development mode in config.
-
----
-
-## Middleware pipeline
-
-Add the two middleware classes to your pipeline. `TracyDebuggerMiddleware` should come early so it initialises Tracy before your application logic runs. `RequestPanelMiddleware` should be placed **very late** in the pipeline so the final state of the Request is reflected in the panel (this is not required for Traccio to work).
+**4. Pipe the middleware**
 
 ```php
 // config/pipeline.php
-use Webware\Traccio\Http\Middleware\RequestPanelMiddleware;
 use Webware\Traccio\Http\Middleware\TracyDebuggerMiddleware;
 
 $app->pipe(TracyDebuggerMiddleware::class);
-
-// ... error handler, routing, ...
-
-$app->pipe(RequestPanelMiddleware::class);
 ```
 
----
+Pipe it first, so Tracy is initialised before your application runs. Panels appear automatically when their dependencies are present in the container.
 
-## Debug panels
+## Panels
 
-All panels are registered automatically when their dependencies are available in the container. No extra wiring is needed beyond the steps above.
-
-| Panel | Tracy bar label | Shows |
+| Panel | Bar label | Requires |
 | --- | --- | --- |
-| `ConfigPanel` | Config | Full application config array |
-| `RoutesPanel` | Routes | All registered Mezzio routes |
-| `RequestPanel` | Request | PSR-7 request headers, method, URI, body |
-| `SqlProfilerPanel` | Database | SQL query groups, timings, parameters |
+| `ConfigPanel` | Config | nothing |
+| `RoutesPanel` | Routes | `Mezzio\Router\RouteCollectorInterface` |
+| `SqlProfilerPanel` | Database | `PhpDb\Adapter\Profiler\ProfilerInterface` |
+| `RequestPanel` | Request | `RequestPanelMiddleware` piped late |
 
-### SQL Profiler panel
-
-The database panel groups identical queries together and displays:
-
-- **Summary bar**: total queries, unique statements, total elapsed, slowest single query (all in ms)
-- **Per-group cards**: execution count badge, SQL text, total / average timing
-- **Per-execution rows**: wall-clock start time (`H:i:s.mmm`), elapsed ms, bound parameters
-
-Parameter tokens reflect the style used in the original query:
-
-| Parameter style | Displayed token |
-| --- | --- |
-| Positional `?` (stored as `"0"`, `"1"`, …) | `?1`, `?2`, … |
-| Named (stored as `"C_1"`, `"name"`, …) | `:C_1`, `:name` |
-
-#### Enabling database profiling
-
-Database profiling requires:
-
-1. A PhpDb adapter registered in the container as `PhpDb\Adapter\AdapterInterface`.
-2. The `ProfilingDelegator` wrapping that adapter to attach a `Profiler` instance.
-
-Enable the delegator in your application's config (it is commented out in `ConfigProvider` by default):
-
-```php
-// config/autoload/development.local.php
-use PhpDb\Adapter\AdapterInterface;
-use Webware\Traccio\PhpDb\ProfilingDelegator;
-
-return [
-    'dependencies' => [
-        'delegators' => [
-            AdapterInterface::class => [
-                ProfilingDelegator::class,
-            ],
-        ],
-    ],
-];
-```
-
-Once the delegator is active, the SQL panel will appear in the Tracy bar automatically whenever `debug` is `true`.
-
----
+See [Configuration](docs/v1/configuration.md) for every option, the full Tracy property list, and database profiling setup.
 
 ## License
 
