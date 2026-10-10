@@ -163,7 +163,7 @@ final class SqlProfilerPanelTest extends TestCase
 
     public function testPanelGroupsRepeatedStatements(): void
     {
-        // Same SQL, different parameters — exercises the prepared+execute profiling path
+        // Same SQL, different parameters: exercises the prepared+execute profiling path
         $this->adapter->query('SELECT * FROM users WHERE username = ?', ['john_doe']);
         $this->adapter->query('SELECT * FROM users WHERE username = ?', ['jane_doe']);
         $this->adapter->query('SELECT * FROM users WHERE username = ?', ['other_user']);
@@ -227,7 +227,7 @@ final class SqlProfilerPanelTest extends TestCase
 
     public function testPanelSummaryShowsTotalQueriesAndUniqueStatements(): void
     {
-        // Two distinct prepared queries, one repeated — 3 total, 2 unique
+        // Two distinct prepared queries, one repeated: 3 total, 2 unique
         $this->adapter->query('SELECT * FROM users WHERE username = ?', ['john_doe']);
         $this->adapter->query('SELECT COUNT(*) FROM users', Adapter::QUERY_MODE_EXECUTE);
         $this->adapter->query('SELECT * FROM users WHERE username = ?', ['jane_doe']);

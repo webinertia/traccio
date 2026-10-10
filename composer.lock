@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f960535b4cc0b91a7e2f52f69de72643",
+    "content-hash": "497a8ac6507a142217ee7af0ff20c701",
     "packages": [
         {
             "name": "tracy/tracy",
@@ -10572,16 +10572,16 @@
         },
         {
             "name": "webware/webware-tools",
-            "version": "1.0.0-rc.4",
+            "version": "1.0.0-rc.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webinertia/webware-tools.git",
-                "reference": "30bde75ad15999e8397bcc9c792c580148315202"
+                "reference": "46caed444973f45ae81c27909d55ffc5602e3175"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webinertia/webware-tools/zipball/30bde75ad15999e8397bcc9c792c580148315202",
-                "reference": "30bde75ad15999e8397bcc9c792c580148315202",
+                "url": "https://api.github.com/repos/webinertia/webware-tools/zipball/46caed444973f45ae81c27909d55ffc5602e3175",
+                "reference": "46caed444973f45ae81c27909d55ffc5602e3175",
                 "shasum": ""
             },
             "require": {
@@ -10610,9 +10610,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webinertia/webware-tools/issues",
-                "source": "https://github.com/webinertia/webware-tools/tree/1.0.0-rc.4"
+                "source": "https://github.com/webinertia/webware-tools/tree/1.0.0-rc.5"
             },
-            "time": "2026-10-10T03:26:25+00:00"
+            "time": "2026-10-10T04:07:50+00:00"
         }
     ],
     "aliases": [],

@@ -114,9 +114,9 @@ All panels are registered automatically when their dependencies are available in
 
 The database panel groups identical queries together and displays:
 
-- **Summary bar** — total queries, unique statements, total elapsed, slowest single query (all in ms)
-- **Per-group cards** — execution count badge, SQL text, total / average timing
-- **Per-execution rows** — wall-clock start time (`H:i:s.mmm`), elapsed ms, bound parameters
+- **Summary bar**: total queries, unique statements, total elapsed, slowest single query (all in ms)
+- **Per-group cards**: execution count badge, SQL text, total / average timing
+- **Per-execution rows**: wall-clock start time (`H:i:s.mmm`), elapsed ms, bound parameters
 
 Parameter tokens reflect the style used in the original query:
 
@@ -156,4 +156,4 @@ Once the delegator is active, the SQL panel will appear in the Tracy bar automat
 
 ## License
 
-BSD-3-Clause — see [LICENSE](LICENSE) for details.
+BSD-3-Clause. See [LICENSE](LICENSE) for details.
