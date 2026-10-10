@@ -87,8 +87,8 @@ Add the two middleware classes to your pipeline. `TracyDebuggerMiddleware` shoul
 
 ```php
 // config/pipeline.php
-use Webware\Traccio\Middleware\RequestPanelMiddleware;
-use Webware\Traccio\Middleware\TracyDebuggerMiddleware;
+use Webware\Traccio\Http\Middleware\RequestPanelMiddleware;
+use Webware\Traccio\Http\Middleware\TracyDebuggerMiddleware;
 
 $app->pipe(TracyDebuggerMiddleware::class);
 

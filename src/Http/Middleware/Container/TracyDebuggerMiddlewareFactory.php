@@ -19,6 +19,7 @@ use PhpDb\Adapter\Profiler\ProfilerInterface;
 use Psr\Container\ContainerInterface;
 use Webware\Traccio\Configuration;
 use Webware\Traccio\Debug;
+use Webware\Traccio\Http\Middleware\TracyDebuggerMiddleware;
 
 final readonly class TracyDebuggerMiddlewareFactory
 {

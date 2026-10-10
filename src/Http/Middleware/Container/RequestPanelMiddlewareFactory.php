@@ -19,6 +19,7 @@ use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Webware\Traccio\Configuration;
 use Webware\Traccio\Debug;
+use Webware\Traccio\Http\Middleware\RequestPanelMiddleware;
 
 /**
  * @internal
