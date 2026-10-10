@@ -1,0 +1,277 @@
+variant = "loose"
+
+[[issues]]
+file = "src/ConfigProvider.php"
+code = "docblock-type-mismatch"
+message = 'Docblock return type `unknown-ref(Webware\Traccio\TracyConfig)` is incompatible with native return type `array<array-key, mixed>`.'
+count = 1
+
+[[issues]]
+file = "src/ConfigProvider.php"
+code = "invalid-return-statement"
+message = '''Invalid return type for function `Webware\Traccio\ConfigProvider::__invoke`: expected `array{0: array{'delegators'?: array<class-string, array<int, class-string>>, 'factories': array<class-string, class-string>}, 'debug'?: bool, Tracy\Debugger::class: unknown-ref(Webware\Traccio\TracyConfig)}`, but found `array{'Tracy\Debugger': unknown-ref(Webware\Traccio\TracyConfig), 'dependencies': array{'delegators'?: array<class-string, array<int, class-string>>, 'factories': array<class-string, class-string>}}`.'''
+count = 1
+
+[[issues]]
+file = "src/ConfigProvider.php"
+code = "invalid-return-statement"
+message = '''Invalid return type for function `Webware\Traccio\ConfigProvider::getTracyConfig`: expected `unknown-ref(Webware\Traccio\TracyConfig)`, but found `array{'dumpTheme': string('dark'), 'keysToHide': list{string('password'), string('pass'), string('secret')}}`.'''
+count = 1
+
+[[issues]]
+file = "src/ConfigProvider.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Webware\Traccio\TracyConfig`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration.php"
+code = "docblock-type-mismatch"
+message = 'Docblock return type `unknown-ref(Webware\Traccio\TracyConfig)` is incompatible with native return type `array<array-key, mixed>`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration.php"
+code = "invalid-return-statement"
+message = 'Invalid return type for function `Webware\Traccio\Configuration::get`: expected `unknown-ref(Webware\Traccio\TracyConfig)`, but found `null`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Webware\Traccio\TracyConfig`.'
+count = 2
+
+[[issues]]
+file = "src/Configuration.php"
+code = "undefined-string-array-index"
+message = '''Undefined array key 'Tracy\Debugger' accessed on `array{Tracy\Debugger::class: unknown-ref(Webware\Traccio\TracyConfig)}`.'''
+count = 1
+
+[[issues]]
+file = "src/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\ContainerExceptionInterface` in `Webware\Traccio\Configuration::debug`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\ContainerExceptionInterface` in `Webware\Traccio\Configuration::get`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\NotFoundExceptionInterface` in `Webware\Traccio\Configuration::debug`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\NotFoundExceptionInterface` in `Webware\Traccio\Configuration::get`.'
+count = 1
+
+[[issues]]
+file = "src/Debug/ConfigPanelFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\ContainerExceptionInterface` in `Webware\Traccio\Debug\ConfigPanelFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Debug/ConfigPanelFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\NotFoundExceptionInterface` in `Webware\Traccio\Debug\ConfigPanelFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$a` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$b` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "invalid-return-statement"
+message = '''Invalid return type for function `Webware\Traccio\Debug\ProfilerDataFormatter::format`: expected `array{'groups': list<array{'avg_elapsed': float, 'count': int, 'executions': list<array{'elapsed': float, 'index': int, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest': float, 'sql': string, 'total_elapsed': float}>, 'summary': array{'slowest_elapsed': float, 'total_elapsed': float, 'total_queries': int, 'unique_statements': int}}`, but found `array{'groups': list<array{'avg_elapsed'?: float, 'count': int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed'?: float}>, 'summary': array{'slowest_elapsed': float, 'total_elapsed': float, 'total_queries': non-negative-int, 'unique_statements': non-negative-int}}`.'''
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "possibly-null-operand"
+message = "Left operand in arithmetic operation might be `null` (type `float|null`)."
+count = 2
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "possibly-null-operand"
+message = "Left operand in spaceship comparison (`<=>`) might be `null` (type `float|null`)."
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "possibly-null-operand"
+message = "Right operand in `>` comparison might be `null` (type `float|null`)."
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "possibly-null-operand"
+message = "Right operand in spaceship comparison (`<=>`) might be `null` (type `float|null`)."
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "possibly-undefined-string-array-index"
+message = '''Possibly undefined array key 'slowest' accessed on `array{'avg_elapsed'?: float, 'count': int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed': float}`.'''
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "possibly-undefined-string-array-index"
+message = '''Possibly undefined array key 'total_elapsed' accessed on `array{'avg_elapsed'?: float, 'count': int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed'?: float}`.'''
+count = 3
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "possibly-undefined-string-array-index"
+message = '''Possibly undefined array key 'total_elapsed' accessed on `array{'avg_elapsed'?: float, 'count': positive-int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed'?: float}`.'''
+count = 1
+
+[[issues]]
+file = "src/Debug/ProfilerDataFormatter.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$profile`."
+count = 1
+
+[[issues]]
+file = "src/Debug/RequestPanelFactory.php"
+code = "unused-parameter"
+message = "Parameter `$container` is never used."
+count = 1
+
+[[issues]]
+file = "src/Debug/RoutesPanelFactory.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$routeCollector`."
+count = 1
+
+[[issues]]
+file = "src/Debug/RoutesPanelFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\ContainerExceptionInterface` in `Webware\Traccio\Debug\RoutesPanelFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Debug/RoutesPanelFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\NotFoundExceptionInterface` in `Webware\Traccio\Debug\RoutesPanelFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Debug/SqlProfilerPanelFactory.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$adapter`."
+count = 1
+
+[[issues]]
+file = "src/Debug/SqlProfilerPanelFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\ContainerExceptionInterface` in `Webware\Traccio\Debug\SqlProfilerPanelFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Debug/SqlProfilerPanelFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\NotFoundExceptionInterface` in `Webware\Traccio\Debug\SqlProfilerPanelFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/RequestPanelMiddlewareFactory.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$requestPanel`."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/TracyDebuggerMiddlewareFactory.php"
+code = "possibly-invalid-argument"
+message = 'Possible argument type mismatch for argument #2 of `Webware\Traccio\Http\Middleware\TracyDebuggerMiddleware::__construct`: expected `unknown-ref(Webware\Traccio\Http\Middleware\TracyConfig)`, but possibly received `unknown-ref(Webware\Traccio\TracyConfig)`.'
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/TracyDebuggerMiddlewareFactory.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$configPanel`."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/TracyDebuggerMiddlewareFactory.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$hasProfiler`."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/TracyDebuggerMiddlewareFactory.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$routesPanel`."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/TracyDebuggerMiddlewareFactory.php"
+code = "redundant-docblock-type"
+message = "Redundant docblock type for variable `$sqlProfilerPanel`."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/TracyDebuggerMiddlewareFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\ContainerExceptionInterface` in `Webware\Traccio\Http\Middleware\Container\TracyDebuggerMiddlewareFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/Container/TracyDebuggerMiddlewareFactory.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Psr\Container\NotFoundExceptionInterface` in `Webware\Traccio\Http\Middleware\Container\TracyDebuggerMiddlewareFactory::__invoke`.'
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "docblock-type-mismatch"
+message = 'Docblock type `unknown-ref(Webware\Traccio\Http\Middleware\TracyConfig)` for parameter `$tracyConfig` is incompatible with native type `array<array-key, mixed>`.'
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "invalid-iterator"
+message = 'The expression provided to `foreach` is not iterable. It resolved to type `unknown-ref(Webware\Traccio\Http\Middleware\TracyConfig)`, which is not iterable.'
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "missing-constant-type"
+message = "Class constant `ENABLE_KEY` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Tracy\Debugger::enable`: expected `array<array-key, string>|bool|null|string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "non-existent-class-like"
+message = 'Cannot find class, interface, enum, or type alias `Webware\Traccio\Http\Middleware\TracyConfig`.'
+count = 1

@@ -32,6 +32,16 @@ final readonly class ConfigPanel implements IBarPanel
     }
 
     #[Override]
+    public function getPanel(): string
+    {
+        return Helpers::capture(function () {
+            $data = $this->data;
+
+            require __DIR__ . "/panels/{$this->id}.panel.phtml";
+        });
+    }
+
+    #[Override]
     public function getTab(): string
     {
         return Helpers::capture(function () {
@@ -39,16 +49,6 @@ final readonly class ConfigPanel implements IBarPanel
             $title = $this->id;
 
             require __DIR__ . "/panels/{$this->id}.tab.phtml";
-        });
-    }
-
-    #[Override]
-    public function getPanel(): string
-    {
-        return Helpers::capture(function () {
-            $data = $this->data;
-
-            require __DIR__ . "/panels/{$this->id}.panel.phtml";
         });
     }
 }

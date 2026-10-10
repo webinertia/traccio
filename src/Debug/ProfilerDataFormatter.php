@@ -54,12 +54,12 @@ final readonly class ProfilerDataFormatter
 
         foreach ($profiles as $index => $profile) {
             /** @var ProfileShape $profile */
-            if ($profile['elapse'] === null || $profile['end'] === null) {
+            if (null === $profile['elapse'] || null === $profile['end']) {
                 continue;
             }
 
             $sql     = $profile['sql'];
-            $elapsed = (float) $profile['elapse'];
+            $elapsed = $profile['elapse'];
 
             $totalQueries++;
             $totalElapsed += $elapsed;
@@ -88,7 +88,7 @@ final readonly class ProfilerDataFormatter
 
             $grouped[$sql]['executions'][] = [
                 'index'      => $index,
-                'start'      => (float) $profile['start'],
+                'start'      => $profile['start'],
                 'elapsed'    => $elapsed,
                 'parameters' => $profile['parameters'],
             ];
@@ -103,7 +103,7 @@ final readonly class ProfilerDataFormatter
         }
         unset($group);
 
-        usort($groups, static fn (array $a, array $b): int => $b['total_elapsed'] <=> $a['total_elapsed']);
+        usort($groups, static fn(array $a, array $b): int => $b['total_elapsed'] <=> $a['total_elapsed']);
 
         return [
             'summary' => [

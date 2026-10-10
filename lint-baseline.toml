@@ -1,0 +1,259 @@
+variant = "loose"
+
+[[issues]]
+file = "src/Debug/ConfigPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$data` is assigned but never used."
+count = 2
+
+[[issues]]
+file = "src/Debug/ConfigPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$title` is assigned but never used."
+count = 1
+
+[[issues]]
+file = "src/Debug/RequestPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$data` is assigned but never used."
+count = 2
+
+[[issues]]
+file = "src/Debug/RequestPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$title` is assigned but never used."
+count = 1
+
+[[issues]]
+file = "src/Debug/RoutesPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$data` is assigned but never used."
+count = 2
+
+[[issues]]
+file = "src/Debug/RoutesPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$title` is assigned but never used."
+count = 1
+
+[[issues]]
+file = "src/Debug/SqlProfilerPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$count` is assigned but never used."
+count = 1
+
+[[issues]]
+file = "src/Debug/SqlProfilerPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$data` is assigned but never used."
+count = 1
+
+[[issues]]
+file = "src/Debug/SqlProfilerPanel.php"
+code = "no-redundant-variable"
+message = "Variable `$total` is assigned but never used."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/RequestPanelMiddleware.php"
+code = "no-fully-qualified-global-class-like"
+message = "Fully-qualified class-like reference detected."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "excessive-parameter-list"
+message = "Parameter list is too long."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "no-fully-qualified-global-class-like"
+message = "Fully-qualified class-like reference detected."
+count = 1
+
+[[issues]]
+file = "src/Http/Middleware/TracyDebuggerMiddleware.php"
+code = "no-isset"
+message = "Use of the `isset` construct."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "ambiguous-function-call"
+message = "Ambiguous function call detected."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "assertion-style"
+message = "Inconsistent assertions style."
+count = 38
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "literal-named-argument"
+message = "Literal argument `'SELECT * FROM users WHERE username = ?'` should be passed as a named argument for clarity."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-first-class-callable"
+message = "Use first-class callable syntax `...` instead of a arrow function."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testComplexQueryWithMultipleParameters`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testGetPanelReturnsValidHtml`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testGetTabReturnsValidHtml`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelCapturesQueryProfiles`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelDisplaysMultipleQueries`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelFactoryCreatesPanel`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelGroupsRepeatedStatements`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelHandlesEmptyProfiles`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelHasCorrectId`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelImplementsIBarPanel`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelShowsQueryParameters`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelShowsTimingInformation`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testPanelSummaryShowsTotalQueriesAndUniqueStatements`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testProfiledAdapterCapturesQueries`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testProfilingDelegatorWrapsAdapter`."
+count = 1
+
+[[issues]]
+file = "test/integration/SqlProfilerPanelTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testTabShowsQueryCount`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "assertion-style"
+message = "Inconsistent assertions style."
+count = 34
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatEmptyProfiles`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatExecutionIndexMatchesOriginalProfileIndex`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatGroupsRepeatedStatements`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatMultipleDistinctStatements`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatPreservesParameterContainerReference`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatSingleProfile`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatSkipsOpenProfiles`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatSortsByTotalElapsedDescending`."
+count = 1
+
+[[issues]]
+file = "test/unit/ProfilerDataFormatterTest.php"
+code = "prefer-test-attribute"
+message = "Use `#[Test]` attribute instead of `test` prefix on method `testFormatSummarySlowEstIsMaxSingleElapsed`."
+count = 1

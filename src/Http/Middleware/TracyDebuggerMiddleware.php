@@ -12,7 +12,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Webware\Traccio\Middleware;
+namespace Webware\Traccio\Http\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -35,6 +35,7 @@ final readonly class TracyDebuggerMiddleware implements MiddlewareInterface
         private ?Debug\RoutesPanel $routesPanel,
     ) {}
 
+    #[\Override]
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         if ($this->debug) {
@@ -42,7 +43,7 @@ final readonly class TracyDebuggerMiddleware implements MiddlewareInterface
                 Debugger::enable($this->tracyConfig[self::ENABLE_KEY]);
             }
             foreach ($this->tracyConfig as $key => $value) {
-                if ($key === self::ENABLE_KEY) {
+                if (self::ENABLE_KEY === $key) {
                     continue;
                 }
                 Debugger::${$key} = $value;
