@@ -3,7 +3,7 @@
 [![PHP Version](https://img.shields.io/packagist/php-v/webware/traccio)](https://packagist.org/packages/webware/traccio)
 [![Latest Version](https://img.shields.io/packagist/v/webware/traccio)](https://packagist.org/packages/webware/traccio)
 [![License](https://img.shields.io/github/license/webinertia/traccio)](LICENSE)
-[![Required CI](https://github.com/webinertia/traccio/actions/workflows/required/webinertia/.github/.github/workflows/continuous-integration.yml/badge.svg)](https://github.com/webinertia/traccio/actions/workflows/required/webinertia/.github/.github/workflows/continuous-integration.yml)
+[![Continuous Integration](https://github.com/webinertia/traccio/actions/workflows/required/webinertia/.github/.github/workflows/continuous-integration.yml/badge.svg)](https://github.com/webinertia/traccio/actions/workflows/required/webinertia/.github/.github/workflows/continuous-integration.yml)
 [![codecov](https://codecov.io/gh/webinertia/traccio/graph/badge.svg)](https://codecov.io/gh/webinertia/traccio)
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fwebinertia%2Ftraccio%2F1.0.x)](https://dashboard.stryker-mutator.io/reports/github.com/webinertia/traccio/1.0.x)
 
