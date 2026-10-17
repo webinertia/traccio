@@ -248,8 +248,9 @@ final class SqlProfilerPanelTest extends TestCase
 
             // Setup schema using DDL
             $createTable = new CreateTable('test');
-            $createTable->addColumn(new Integer('id', true, null, ['autoincrement' => true]))
-                ->addColumn(new Varchar('name', 255, false));
+            $createTable->addColumn(new Integer('id', true, null, [
+                'autoincrement' => true,
+            ]))->addColumn(new Varchar('name', 255, false));
 
             $sql       = new Sql($adapter);
             $sqlString = $sql->buildSqlString($createTable);
@@ -366,7 +367,8 @@ final class SqlProfilerPanelTest extends TestCase
             nullable: true,
             options : ['autoincrement' => true],
         );
-        $createTable->addColumn($id)
+        $createTable
+            ->addColumn($id)
             ->addColumn(new Varchar('username', 50, false))
             ->addColumn(new Varchar('email', 100, false));
 
