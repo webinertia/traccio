@@ -84,7 +84,7 @@ services:
   # `db_env_json` - remove it if the package pins a root password instead.
   # -------------------------------------------------------------------------
   # mysql:
-  #   image: mysql:9.7
+  #   image: mysql:9.7.4
   #   environment:
   #     MYSQL_ROOT_HOST: "%"
   #     MYSQL_ALLOW_EMPTY_PASSWORD: "true"
@@ -106,7 +106,7 @@ services:
   # # the MYSQL_USER / MYSQL_PASSWORD credentials). Uncomment alongside
   # # `mysql`.
   # phpmyadmin:
-  #   image: phpmyadmin:latest
+  #   image: phpmyadmin:5.2.3
   #   environment:
   #     PMA_HOST: mysql
   #     PMA_PORT: 3306
