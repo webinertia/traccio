@@ -29,13 +29,13 @@ Database profiling additionally requires a [PhpDb](https://github.com/php-db) ad
 
 ## Quick start
 
-**1. Install**
+### 1. Install
 
 ```bash
 composer require webware/traccio
 ```
 
-**2. Register the ConfigProvider**
+### 2. Register the ConfigProvider
 
 The [laminas-component-installer](https://docs.laminas.dev/laminas-component-installer/) plugin offers to do this for you.
 
@@ -50,7 +50,7 @@ $aggregator = new ConfigAggregator([
 ]);
 ```
 
-**3. Enable debug**
+### 3. Enable debug
 
 ```php
 // config/autoload/traccio.global.php
@@ -64,7 +64,7 @@ return [
 ];
 ```
 
-**4. Pipe the middleware**
+### 4. Pipe the middleware
 
 ```php
 // config/pipeline.php
