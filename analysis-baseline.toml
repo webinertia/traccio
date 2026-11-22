@@ -98,50 +98,8 @@ count = 1
 
 [[issues]]
 file = "src/Debug/ProfilerDataFormatter.php"
-code = "invalid-return-statement"
-message = '''Invalid return type for function `Webware\Traccio\Debug\ProfilerDataFormatter::format`: expected `array{'groups': list<array{'avg_elapsed': float, 'count': int, 'executions': list<array{'elapsed': float, 'index': int, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest': float, 'sql': string, 'total_elapsed': float}>, 'summary': array{'slowest_elapsed': float, 'total_elapsed': float, 'total_queries': int, 'unique_statements': int}}`, but found `array{'groups': list<array{'avg_elapsed'?: float, 'count': int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed'?: float}>, 'summary': array{'slowest_elapsed': float, 'total_elapsed': float, 'total_queries': non-negative-int, 'unique_statements': non-negative-int}}`.'''
-count = 1
-
-[[issues]]
-file = "src/Debug/ProfilerDataFormatter.php"
-code = "possibly-null-operand"
-message = "Left operand in arithmetic operation might be `null` (type `float|null`)."
-count = 2
-
-[[issues]]
-file = "src/Debug/ProfilerDataFormatter.php"
-code = "possibly-null-operand"
-message = "Left operand in spaceship comparison (`<=>`) might be `null` (type `float|null`)."
-count = 1
-
-[[issues]]
-file = "src/Debug/ProfilerDataFormatter.php"
-code = "possibly-null-operand"
-message = "Right operand in `>` comparison might be `null` (type `float|null`)."
-count = 1
-
-[[issues]]
-file = "src/Debug/ProfilerDataFormatter.php"
-code = "possibly-null-operand"
-message = "Right operand in spaceship comparison (`<=>`) might be `null` (type `float|null`)."
-count = 1
-
-[[issues]]
-file = "src/Debug/ProfilerDataFormatter.php"
-code = "possibly-undefined-string-array-index"
-message = '''Possibly undefined array key 'slowest' accessed on `array{'avg_elapsed'?: float, 'count': int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed': float}`.'''
-count = 1
-
-[[issues]]
-file = "src/Debug/ProfilerDataFormatter.php"
-code = "possibly-undefined-string-array-index"
-message = '''Possibly undefined array key 'total_elapsed' accessed on `array{'avg_elapsed'?: float, 'count': int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed'?: float}`.'''
-count = 3
-
-[[issues]]
-file = "src/Debug/ProfilerDataFormatter.php"
-code = "possibly-undefined-string-array-index"
-message = '''Possibly undefined array key 'total_elapsed' accessed on `array{'avg_elapsed'?: float, 'count': positive-int, 'executions'?: list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest'?: float, 'sql'?: string, 'total_elapsed'?: float}`.'''
+code = "less-specific-return-statement"
+message = '''Returned type `array{'groups': list<array{'avg_elapsed': float, 'count': int, 'executions': list<array{'elapsed': float, 'index': array-key, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest': float, 'sql': string, 'total_elapsed': float}>, 'summary': array{'slowest_elapsed': float, 'total_elapsed': float, 'total_queries': non-negative-int, 'unique_statements': non-negative-int}}` is less specific than the declared return type `array{'groups': list<array{'avg_elapsed': float, 'count': int, 'executions': list<array{'elapsed': float, 'index': int, 'parameters': PhpDb\Adapter\ParameterContainer|null, 'start': float}>, 'slowest': float, 'sql': string, 'total_elapsed': float}>, 'summary': array{'slowest_elapsed': float, 'total_elapsed': float, 'total_queries': int, 'unique_statements': int}}` for function `Webware\Traccio\Debug\ProfilerDataFormatter::format`.'''
 count = 1
 
 [[issues]]

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a0ddf3260631f7d194de8c8952135ab",
+    "content-hash": "301d8d3326f5a47dcb639057a4de60e7",
     "packages": [
         {
             "name": "tracy/tracy",
@@ -10572,20 +10572,20 @@
         },
         {
             "name": "webware/webware-tools",
-            "version": "1.0.0-rc.14",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webinertia/webware-tools.git",
-                "reference": "8093557960cc9d1415bc0f8a674da752907bfcb3"
+                "reference": "fad0bc28ac049364ade3ff26debc6cc7c1afc89b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webinertia/webware-tools/zipball/8093557960cc9d1415bc0f8a674da752907bfcb3",
-                "reference": "8093557960cc9d1415bc0f8a674da752907bfcb3",
+                "url": "https://api.github.com/repos/webinertia/webware-tools/zipball/fad0bc28ac049364ade3ff26debc6cc7c1afc89b",
+                "reference": "fad0bc28ac049364ade3ff26debc6cc7c1afc89b",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.4.0 || ~8.5.0"
+                "php": "~8.4.0 || ~8.5.0 || ~8.6.0"
             },
             "require-dev": {
                 "roave/security-advisories": "dev-master"
@@ -10610,10 +10610,10 @@
             ],
             "support": {
                 "issues": "https://github.com/webinertia/webware-tools/issues",
-                "source": "https://github.com/webinertia/webware-tools/tree/1.0.0-rc.14"
+                "source": "https://github.com/webinertia/webware-tools/tree/1.1.4"
             },
-            "time": "2026-11-13T09:23:54+00:00",
-            "published-time": "2026-11-13T13:26:52+00:00"
+            "time": "2026-11-22T08:54:14+00:00",
+            "published-time": "2026-11-22T08:54:20+00:00"
         }
     ],
     "aliases": [],
@@ -10633,5 +10633,5 @@
     "platform-overrides": {
         "php": "8.4.99"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }

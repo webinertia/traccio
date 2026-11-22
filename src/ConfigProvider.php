@@ -38,12 +38,14 @@ final readonly class ConfigProvider
     {
         return [
             'factories' => [
-                Debug\ConfigPanel::class                       => Debug\ConfigPanelFactory::class,
-                Debug\RequestPanel::class                      => Debug\RequestPanelFactory::class,
-                Debug\SqlProfilerPanel::class                  => Debug\SqlProfilerPanelFactory::class,
-                Debug\RoutesPanel::class                       => Debug\RoutesPanelFactory::class,
-                Http\Middleware\TracyDebuggerMiddleware::class => Http\Middleware\Container\TracyDebuggerMiddlewareFactory::class,
-                Http\Middleware\RequestPanelMiddleware::class  => Http\Middleware\Container\RequestPanelMiddlewareFactory::class,
+                Debug\ConfigPanel::class      => Debug\ConfigPanelFactory::class,
+                Debug\RequestPanel::class     => Debug\RequestPanelFactory::class,
+                Debug\SqlProfilerPanel::class => Debug\SqlProfilerPanelFactory::class,
+                Debug\RoutesPanel::class      => Debug\RoutesPanelFactory::class,
+                Http\Middleware\TracyDebuggerMiddleware::class =>
+                    Http\Middleware\Container\TracyDebuggerMiddlewareFactory::class,
+                Http\Middleware\RequestPanelMiddleware::class =>
+                    Http\Middleware\Container\RequestPanelMiddlewareFactory::class,
             ],
             // Add this to the application's config to enable DB profiling
             // 'delegators' => [
