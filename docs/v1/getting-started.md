@@ -4,7 +4,7 @@
 
 | Requirement | Version |
 | --- | --- |
-| PHP | `~8.2 \|\| ~8.3 \|\| ~8.4 \|\| ~8.5` |
+| PHP | `~8.4.1 \|\| ~8.5.0 \|\| ~8.6.0` |
 | tracy/tracy | `^2.11` |
 | mezzio/mezzio | `^3.26` (host application) |
 
